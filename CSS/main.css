@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body{
+	width: 1900px;
+	margin: 0 auto;
+	background: #fff;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.top-menu{
+	 height: 35px;
+	 background: #2f415a;
+	 color: white;
+
+}
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+.menu-1{
+	float: left;
+}
+.menu-1 ul li{
+	display: inline;
+	margin-right: 32px;
+	line-height: 35px;
+}
+.menu-1 ul li a{
+	color:white;
+}
+.block-right{
+	float: right;
+}
+.block-right ul li{
+	display: inline-block;
+	line-height: 35px;
+	padding: 0 42px;
+	height: 35px;
+}
+.block-right ul li.personal{
+	background: #d8192b;
+	position: relative;
+}
+li.favorite>i{
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	background: url("../images/favorite.png") no-repeat;
+}
