@@ -4,7 +4,7 @@
 	outline: none;
 }
 body{
-	width: 1900px;
+	width: 100%;
 	margin: 0 auto;
 	background: #fff;
 	font-size: 13px;
@@ -49,6 +49,10 @@ a{
 .block-right ul li.personal{
 	background: #d8192b;
 	position: relative;
+	padding-left: 63px;
+}
+.block-right ul li.favorite{
+	position: relative;
 }
 li.favorite>i{
 	display: block;
@@ -56,4 +60,30 @@ li.favorite>i{
 	height: 16px;
 	position: absolute;
 	background: url("../images/favorite.png") no-repeat;
+	left:18px;
+	top:10px;
+}
+li.personal>i{
+	display: block;
+	width: 16px;
+	height: 19px;
+	position: absolute;
+	background: url("../images/personal.png") no-repeat;
+	left:38px;
+	top:8px;
+}
+.basis-header{
+	height: 94px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.logo{
+	font-size: 36px;
+	font-family: Futura-Bold;
+	color:#d8192b;
+	 
+}
+@font-face{
+	font-family: Futura-Bold;
+	src: url(fonts/Futura-Bold.ttf);
 }
