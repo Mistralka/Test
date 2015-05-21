@@ -3,6 +3,7 @@
 	padding: 0;
 	outline: none;
 }
+
 body{
 	width: 100%;
 	background: #fff;
@@ -15,11 +16,13 @@ ul{
 a{
 	text-decoration: none;
 }
+
 .clr:after{
-	content: "";
-	display: table;
- 	clear: both;
- }
+ display: table;  
+ content: " ";
+ clear: both;  
+}
+
 .top-menu{
 	 width: 100%;
 	 height: 35px;
@@ -47,65 +50,46 @@ a{
 }
 
 .block-right ul li{
-	display: inline-block;
+	float: left;
+	display: block;
 	line-height: 35px;
 	padding: 0 42px;
 	height: 35px;
 }
 .block-right ul li.personal{
-	background: #d8192b;
+	background: #d8192b url("../images/personal.png") no-repeat 35px 8px;
 	position: relative;
 	width: 201px;
-	padding-left: 63px;
+	padding-left: 69px;
 	box-sizing:border-box;
 }
 .block-right ul li.favorite{
+	background: #2f415a url("../images/favorite.png") no-repeat 15px 10px;
 	position: relative;
 }
-li.favorite>i{
-	display: block;
-	width: 16px;
-	height: 16px;
-	position: absolute;
-	background: url("../images/favorite.png") no-repeat;
-	left:18px;
-	top:10px;
-}
-li.personal>i{
-	display: block;
-	width: 16px;
-	height: 19px;
-	position: absolute;
-	background: url("../images/personal.png") no-repeat;
-	left:38px;
-	top:8px;
-}
 .basis-header{
-	height: 94px;
-	width: 1200px;
-	margin: 0 auto;
+	min-height: 94px; 
 }
 .logo{
 	position: relative;
 }
-.logo span{
+.basis-header .logo span{
 	line-height: 94px;
-	font-size: 32px;
+	font-size: 31px;
 	color:#d8192b;
 	font-family: 'AG_Futura Bold', arial;
-	}
- .logo span:last-child{
+}
+ .basis-header .logo span:last-child{
  	padding-left: 69px;
  }
- .logo img{
+ .basis-header .logo img{
  	position: absolute;
- 	margin-left: 8px;
- 	margin-right: 8px;
+ 	left: 148px;
  	top:21px;
 }
 input[name="topsearch"]{
 	height: 34px;
-	width: 347px;
+	width: 28.89%;
 	padding-left: 30px;
 	color:#264f85;
 	border:2px solid #264f85;
@@ -115,26 +99,25 @@ input[name="topsearch"]{
  	-moz-border-radius: 5px;
  	-o-border-radius: 5px;
  	margin-top: 30px;
- 	margin-left: 57px;
- 	margin-right: 60px;
+ 	margin-left: 4.74%;
+ 	margin-right: 4.99%;
  	background: url("../images/search.png") no-repeat 11px 9px;
 }
-::-webkit-input-placeholder{  
+input[name="topsearch"]::-webkit-input-placeholder{  
    color:#264f85;
 }
-:-moz-placeholder{  
+input[name="topsearch"]::-moz-placeholder{  
    color:#264f85;
 }
-::-moz-placeholder{  
-    color:#264f85;
-}
-:-ms-input-placeholder{  
+input[name="topsearch"]::-ms-input-placeholder{  
     color:#264f85;
 }
 .basis-header .phone{
 	background: url("../images/phone.png") no-repeat 0 3px;
 	margin-top: 28px;
 	padding-left: 30px;
+	width: 15.8%;
+	box-sizing:border-box;
  }
  .phone p:first-child{
  	font-size: 19px;
@@ -145,9 +128,8 @@ input[name="topsearch"]{
  }
 .basket{
 	background: url("../images/basket.png") no-repeat;
-	margin-left: 34px;
 	margin-top: 28px;
-	padding-left: 45px;
+	padding-left: 45px; 
  }
 .basket p:first-child{
 	font-size: 16px;
@@ -161,7 +143,7 @@ input[name="topsearch"]{
 	line-height: 52px;
 }
 .bottom-menu ul li{
-	display: inline-block;
+	display: inline;
 	margin-right: 32px;
 }
 .bottom-menu ul li a{
@@ -170,6 +152,7 @@ input[name="topsearch"]{
 	font-weight: bold;
 }
 .bottom-menu ul li.circle{
+	display: inline-block;
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
@@ -180,21 +163,24 @@ input[name="topsearch"]{
  	margin-right: 0;
 }
  .banner{
- 	position: relative;
  	height: 574px;
  	background: #000;
  }
- .actions{
- 	position: absolute;
- 	bottom:-42px;
- 	left: 19%;
+ 
+.tabs{
+	min-height: 296px;	 
+}
+.actions{
+	position: relative;
+	top: -42px; 
+	max-height: 210px;
+	width: 100%;
  }
  .action{
- 	display: inline-block;
- 	width: 385px;
+ 	float: left;
+ 	width: 32%;
  	height: 210px;
- 	margin-right: 19px;
- 	vertical-align: top;
+ 	margin-right: 22px;
 }
 @font-face{
 font-family: proximanovalight;
@@ -221,8 +207,9 @@ src:url("fonts/proximanovalight.ttf");
 	margin-top: 55px;
 }
 .action p.notice{
-	font-family: proximanovalight;
-	font-size: 18px;
+	font-family: proximanovalight, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
 	color:#fff;
 	margin-left: 180px;
 	margin-top: 14px;
@@ -230,10 +217,6 @@ src:url("fonts/proximanovalight.ttf");
 }
 .action-1 p.name{
 	color: #fff;
-}
-.tabs{
-	padding-top:240px;
-	padding-bottom: 20px;
 }
 .tabs ul{
 	text-align: center;
@@ -341,11 +324,11 @@ h1{
 	margin-top: 25px;
 }
 .block{
+	float:left;
 	background: #fff;
-	display: inline-block;
 	width: 283px;
 	height: 350px;
-	margin-right: 19px;
+	margin-right: 23px;
 	vertical-align: top;
 }
 .news-4{
@@ -370,7 +353,6 @@ h1{
 }
 .advantages{
 	height: 418px;
-	width: 100%;
 	padding-top: 62px;
 	border-bottom: 1px solid #d5d5d5;
 }
@@ -392,8 +374,11 @@ h1{
 .adv img{
 	margin-left: 60px;
 }
-.adv-3 img, .adv-2 img{
-	margin-left: 70px;
+.adv-2 img{
+	margin-left: 85px;
+}
+.adv-3 img{
+	margin-left: 80px;
 }
 .adv-4 img{
 	margin-left: 90px;
@@ -475,11 +460,26 @@ input[type="submit"]{
 	margin-left: 10px;
 }
 .middle-footer{
-	height: 298px;
+	padding: 36px 0 39px;
+	min-height: 298px;
 	background: #eeeff1;
 }
+.b-1 .logo img{
+	position: absolute;
+ 	left:103px;
+ 	top:-3px;
+ }
+ .b-1 .logo span:last-child{
+ 	padding-left: 40px;
+ }
+
 .b-1 .logo span{
 	font-size: 23px;
+	color:#d8192b;
+	font-family: 'AG_Futura Bold', arial;
+}
+.b-1 .phone{
+	margin-top: 37px;
 }
 .b-1 .phone p:first-child{
 	font-size: 19px;
@@ -492,12 +492,30 @@ input[type="submit"]{
 	margin-top: 30px;
 }
 .b-2, .b-3, .b-4, .b-5{
+	margin-top: 3px;
 	margin-left: 90px;
-	margin-top: 28px;
 } 
+.b-3{
+	margin-left: 105px;
+}
+.b-4{
+	margin-left: 158px;
+}
+.b-5{
+	margin-left: 140px;
+}
 .middle-footer ul li a{
 	color: #666666;
 }
 .middle-footer ul li{
 	margin-top: 15px;
+}
+.bottom-footer{
+	height: 63px;
+	color: #666666;
+	line-height: 63px;
+}
+.bottom-footer a{
+	color: #264f85;
+	font-weight: bold;
 }
